@@ -95,9 +95,8 @@ public class Sha1 {
 
 ```
 ## OUTPUT:
-```
-![image](https://github.com/ashmistalin/Ex-04/assets/103128410/2db397f7-8d28-4b03-884f-bbd447da4ff9)
-```
+![image](https://github.com/ashmistalin/Ex-04/assets/103128410/8103fa92-6fc7-4d64-a5c9-8ab80c47328f)
+
 ## RESULT:
 Thus SHA was implemented successfully.
 
