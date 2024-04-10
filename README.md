@@ -54,55 +54,64 @@ H0, H1, H2, H3, H4, H5: Word buffers with final message digest
 ## PROGRAM
 ```
 import java.security.*;
-public class SHA1 {
-public static void main(String[] a) {
-try {
-MessageDigest md = MessageDigest.getInstance("SHA1");
-System.out.println("Message digest object info: ");
-System.out.println(" Algorithm = " +md.getAlgorithm());
-System.out.println(" Provider = " +md.getProvider());
-System.out.println(" ToString = " +md.toString());
-String input = "";
-md.update(input.getBytes());
-byte[] output = md.digest();
-System.out.println();
-System.out.println("SHA1(\""+input+"\") = " +bytesToHex(output));
-input = "abc";
-md.update(input.getBytes());
-output = md.digest();
-System.out.println();
-System.out.println("SHA1(\""+input+"\") = " +bytesToHex(output));
-input = "abcdefghijklmnopqrstuvwxyz";
-md.update(input.getBytes());
-output = md.digest();
-System.out.println();
-System.out.println("SHA1(\"" +input+"\") = " +bytesToHex(output));
-System.out.println(""); }
-catch (Exception e) {
-System.out.println("Exception: " +e);
+
+public class Sha1 {
+    public static void main(String[] a) { try {
+        MessageDigest md = MessageDigest.getInstance("SHA1");
+        System.out.println("Message digest object info:\n	");
+        System.out.println("Algorithm=" + md.getAlgorithm());
+        System.out.println("Provider=" + md.getProvider());
+        System.out.println("ToString=" + md.toString());
+        String input = "";
+        md.update(input.getBytes());
+        byte[] output = md.digest();
+        System.out.println();
+        System.out.println("SHA1(\"" + input + "\")=" + bytesToHex(output));
+        input = "ashmi";
+        md.update(input.getBytes());
+        output = md.digest();
+        System.out.println();
+        System.out.println("SHA1(\"" + input + "\")=" + bytesToHex(output));
+        input = "ashmistalin";
+        md.update(input.getBytes()); output = md.digest();
+        System.out.println();
+        System.out.println("SHA1(\"" + input + "\")=" + bytesToHex(output));
+        System.out.println();
+    } catch (Exception e) { System.out.println("Exception:" + e);
+    }
+    }
+
+    private static String bytesToHex(byte[] b) {
+        char hexDigit[] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+        StringBuffer buf = new StringBuffer();
+
+        for (byte aB : b) {
+            buf.append(hexDigit[(aB >> 4) & 0x0f]); buf.append(hexDigit[aB & 0x0f]);
+        }
+
+        return buf.toString();
+    }
 }
-}
-public static String bytesToHex(byte[] b) {
-char hexDigit[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
-StringBuffer buf = new StringBuffer();
-for (int j=0; j<b.length; j++) {
-buf.append(hexDigit[(b[j] >> 4) & 0x0f]);
-buf.append(hexDigit[b[j] & 0x0f]); }
-return buf.toString(); }
-}
+
 ```
 ## OUTPUT:
 ```
-C:\Program Files\Java\jdk1.6.0_20\bin>javac SHA1.java
-C:\Program Files\Java\jdk1.6.0_20\bin>java SHA1
+C:\Users\Dell\.jdks\openjdk-19.0.2\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\lib\idea_rt.jar=5387:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\Dell\IdeaProjects\Abstraction\out\production\Abstraction Sha1
 Message digest object info:
-Algorithm = SHA1
-Provider = SUN version 1.6
-ToString = SHA1 Message Digest from SUN, <initialized>
-SHA1("") = DA39A3EE5E6B4B0D3255BFEF95601890AFD80709
-SHA1("abc") = A9993E364706816ABA3E25717850C26C9CD0D89D
-SHA1("abcdefghijklmnopqrstuvwxyz") =
-32D10C7B8CF96570CA04CE37F2A19D84240D3A89
+	
+Algorithm=SHA1
+Provider=SUN version 19
+ToString=SHA1 Message Digest from SUN, <initialized>
+
+
+SHA1("")=DA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+
+SHA1("ashmi")=1E69E456EA0DEB338F546B435CCBA92599ABC5F3
+
+SHA1("ashmistalin")=8AB562F55567B50BDFC9E522C5AEB7D596C332C9
+
+Process finished with exit code 0
+
 ```
 ## RESULT:
 Thus SHA was implemented successfully.
