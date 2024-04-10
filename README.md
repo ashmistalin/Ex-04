@@ -96,22 +96,7 @@ public class Sha1 {
 ```
 ## OUTPUT:
 ```
-C:\Users\Dell\.jdks\openjdk-19.0.2\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\lib\idea_rt.jar=5387:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\Dell\IdeaProjects\Abstraction\out\production\Abstraction Sha1
-Message digest object info:
-	
-Algorithm=SHA1
-Provider=SUN version 19
-ToString=SHA1 Message Digest from SUN, <initialized>
-
-
-SHA1("")=DA39A3EE5E6B4B0D3255BFEF95601890AFD80709
-
-SHA1("ashmi")=1E69E456EA0DEB338F546B435CCBA92599ABC5F3
-
-SHA1("ashmistalin")=8AB562F55567B50BDFC9E522C5AEB7D596C332C9
-
-Process finished with exit code 0
-
+![image](https://github.com/ashmistalin/Ex-04/assets/103128410/2db397f7-8d28-4b03-884f-bbd447da4ff9)
 ```
 ## RESULT:
 Thus SHA was implemented successfully.
@@ -233,7 +218,8 @@ signature\n ");
 }
 ```
 ## OUTPUT:
-![image](https://github.com/IsaacAIML2023/Ex-04/assets/158465339/337034c5-ea1c-4332-a753-7c5b679325f2)
+![Screenshot 2024-04-10 214843](https://github.com/ashmistalin/Ex-04/assets/103128410/daec7cfa-6f88-485c-a445-2e27f29d93cf)
+![Screenshot 2024-04-10 214853](https://github.com/ashmistalin/Ex-04/assets/103128410/99139772-7cc4-42fc-8b14-1545b22abbf4)
 
 ## RESULT:
 Thus program to implement the signature scheme named digital signature standard (Euclidean Algorithm) is implementeds successfully.
